@@ -2,7 +2,28 @@
 html, body {
 	margin: 0;
 	padding: 0;
+	height: 100vh;
 	font: 1.2rem 'Ubuntu', sans-serif;
+}
+
+body {
+	padding-top: 100px;
+}
+
+
+
+section {
+	width: 50%;
+	height: 250px;
+	padding-top: 40px;
+	margin: 0 auto;
+	text-align: center;
+	border: 1px dashed black;
+	border-radius: -50%;
+}
+
+h2 {
+	text-align: center;
 }
 
 #wordField {
@@ -10,31 +31,52 @@ html, body {
 	color: transparent;
 }
 
-#wordField input {
+#wordField div {
 	border:none;
 	border-bottom: 2px solid gray;
-	text-align: justify;
-}
-
-.inputField {
 	text-align: center;
-	width: auto;
+	margin: 2px;
+	width: 20px;
 	display: inline-block;
-	margin: 2px 5px;
+	padding: 1px;
 }
 
-
-input {
-  display: inline-block;
-  margin: 1.2rem auto;
-  border: none;
-  padding: 0;
-  width: 10.5ch;
-  background: repeating-linear-gradient(90deg, dimgrey 0, dimgrey 1ch, transparent 0, transparent 1.5ch) 0 100%/ 10ch 2px no-repeat;
-  font: 1.2rem 'Ubuntu Mono', monospace;
-  letter-spacing: 0.5ch;
+#wordField div.blankspace {
+	border:none;
+	margin: 2px;
+	width: 20px;
+	display: inline-block;
+	padding: 1px;
 }
-input:focus {
-  outline: none;
-  color: dodgerblue;
+
+#letters {
+	margin-top: 50px;
+}
+
+#letters a {
+	width: 40px;
+	display: inline-block;
+	padding: 2px 1px;
+	margin: 2px;
+	background: #a3a3a3;
+}
+
+#letters a:hover {
+	cursor: pointer;
+	background: #d2d2d2;
+}
+
+.stats {
+	text-align: left;
+	margin: 50px 0px 10px 25px;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
 }
