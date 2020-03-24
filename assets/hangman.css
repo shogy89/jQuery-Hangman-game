@@ -1,4 +1,7 @@
+/* Hangman CSS */
+
 @import url("https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono");
+
 html, body {
 	margin: 0;
 	padding: 0;
@@ -9,8 +12,6 @@ html, body {
 body {
 	padding-top: 100px;
 }
-
-
 
 section {
 	width: 50%;
@@ -64,6 +65,16 @@ h2 {
 #letters a:hover {
 	cursor: pointer;
 	background: #d2d2d2;
+}
+
+.wrong {
+	background-color: #ff9999 !important;
+	color: whitesmoke;
+}
+
+.correct {
+	background-color: #99ff99 !important;
+	color: black;
 }
 
 .stats {
