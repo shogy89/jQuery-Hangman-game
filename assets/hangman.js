@@ -29,7 +29,7 @@ function updateLetter(x)
 	if ($('#' + x).hasClass('wrong')) {
 
 	}else {
-		
+
 		if (item.indexOf(x) == -1) {
 			var livesLeft = $('#lifes').text();
 			if (livesLeft == 0){
@@ -89,7 +89,7 @@ function endGame(itemlenght, startTime) {
 		function() 
 		{
 
-			if (confirm('You won! Game guration: ' + gameDuration + ' seconds\n You want to play again?')) {
+			if (confirm('You won ' + person + '! Game guration: ' + gameDuration + ' seconds\n You want to play again?')) {
 			    location.reload(true);
 			} else {
 			    alert('I am sorry to hear that. Ok, see you next time?');
