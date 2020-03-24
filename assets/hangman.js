@@ -25,39 +25,44 @@ $('#wordField').html(function (i, html) {
 $('#wordField div').addClass('noselect');
 
 function updateLetter(x)
-{
-	if (item.indexOf(x) == -1) {
-		var livesLeft = $('#lifes').text();
-		if (livesLeft == 0){
-			$('#wordField div').css('color', 'black');
-			setTimeout(
-			    	function(){
-			    		location.reload(true);
-			    	}, 2000);
-		}else {
-			// take one life
-			$('#lifes').text(livesLeft - 1);
-			// disable wrong letter
-			$('#' + x).addClass('wrong');
-		}
+{   
+	if ($('#' + x).hasClass('wrong')) {
+
 	}else {
-		// I found a letter
-		$('#' + x).addClass('correct');
+		
+		if (item.indexOf(x) == -1) {
+			var livesLeft = $('#lifes').text();
+			if (livesLeft == 0){
+				$('#wordField div').css('color', 'black');
+				setTimeout(
+				    	function(){
+				    		location.reload(true);
+				    	}, 2000);
+			}else {
+				// take one life
+				$('#lifes').text(livesLeft - 1);
+				// disable wrong letter
+				$('#' + x).addClass('wrong');
+			}
+		}else {
+			// I found a letter
+			$('#' + x).addClass('correct');
 
-		// find letter in string
-		var positionsArray = [];
-	    for(var i=0; i<item.length;i++) {
-	        if (item[i] === x) {
-	        	positionsArray.push(i+1);
-	        }
-	    }
+			// find letter in string
+			var positionsArray = [];
+		    for(var i=0; i<item.length;i++) {
+		        if (item[i] === x) {
+		        	positionsArray.push(i+1);
+		        }
+		    }
 
-	    // style choosen letter
-	    changeXColor(x);
+		    // style choosen letter
+		    changeXColor(x);
 
-	    // end game -> item length, start time
-	    endGame(item.length, startTime);
+		    // end game -> item length, start time
+		    endGame(item.length, startTime);
 
+		}
 	}
 }
 
